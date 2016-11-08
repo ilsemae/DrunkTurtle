@@ -1,0 +1,10 @@
+<launch>
+	<node pkg="turtlesim" name="sim" type="turtlesim_node"/>
+	<node pkg="drunk_turtle" name="turtle_uber" type="turtle_uber.py" output="screen"/>
+	<node pkg="drunk_turtle" name="walkie_talkie" type="walkie_talkie.py" output="screen"/>
+	<arg name="swag" default="random" />
+	<param name="stumble_style" value="$(arg swag)"/>
+	<param name="x" value="" />
+	<param name="y" value="" />
+	<param name="theta" value="" />
+</launch>
